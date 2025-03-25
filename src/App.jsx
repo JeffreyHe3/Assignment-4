@@ -8,10 +8,10 @@ function App() {
 
     return (
         <div id="app-container">
-                <HeronsFormula className="component"/>
-                <AmbiguousCase className="component"/>
-                <NewtonsMethod className="component"/>
-                <PolynomialFunction className="component"/>
+            <HeronsFormula className="component" />
+            <AmbiguousCase className="component" />
+            <NewtonsMethod className="component" />
+            <PolynomialFunction className="component" />
         </div>
     )
 }

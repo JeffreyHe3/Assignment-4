@@ -58,13 +58,13 @@ function PolynomialFunction() {
     return (
         <div className="container">
             <h1>Polynomial Function</h1>
-            <form id="poly-form" onSubmit={(event) => { Polynomial(event) }}>
+            <form id="poly-form" onSubmit={event => { Polynomial(event) }}>
                 <label htmlFor="cPoly">Coefficients:</label>
-                <input type="text" id="cPoly" name="cPoly" value={cPoly} onChange={(event) => { setCPoly(String(event.target.value)) }} required />
+                <input type="text" id="cPoly" name="cPoly" value={cPoly} onChange={event => { setCPoly(String(event.target.value)) }} required />
                 <label htmlFor="ePoly">Exponents:</label>
-                <input type="text" id="ePoly" name="ePoly" value={ePoly} onChange={(event) => { setEPoly(String(event.target.value)) }} required />
+                <input type="text" id="ePoly" name="ePoly" value={ePoly} onChange={event => { setEPoly(String(event.target.value)) }} required />
                 <label htmlFor="xPoly">x Value:</label>
-                <input type="number" step="0.01" id="xPoly" name="xPoly" value={x} onChange={(event) => { setX(Number(event.target.value)) }} required />
+                <input type="number" step="0.01" id="xPoly" name="xPoly" value={x} onChange={event => { setX(Number(event.target.value)) }} required />
                 <label htmlFor="resultPoly1">Polynomial Function (Result):</label>
                 <input className="result" type="text" id="resultPoly1" name="resultPoly1" value={resultPoly1} readOnly />
                 <label htmlFor="resultPoly2">Polynomial Evaluation (Result):</label>
