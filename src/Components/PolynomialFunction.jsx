@@ -4,17 +4,15 @@ import './style.css'
 function PolynomialFunction() {
     let [cPoly, setCPoly] = useState("");
     let [ePoly, setEPoly] = useState("");
-    let [x, setX] = useState("");
+    const [x, setX] = useState("");
     const [resultPoly1, setResult1] = useState("");
     const [resultPoly2, setResult2] = useState("");
 
     function Polynomial(event) {
         event.preventDefault();
-
         let arrayC = cPoly.split(" ");
         let arrayE = ePoly.split(" ");
         let output1 = "f(x) =";
-        let output2 = "f(" + x + ") = ";
         let answer = 0;
 
         for (let i = 0; i < arrayC.length; i++) {
@@ -46,15 +44,17 @@ function PolynomialFunction() {
                 }
             }
         }
+
         setResult1(output1);
 
         for (let i = 0; i < arrayC.length; i++) {
-            answer += parseFloat(arrayC[i]) * Math.pow(xValue, parseFloat(arrayE[i]));
+            answer += parseFloat(arrayC[i]) * Math.pow(x, parseFloat(arrayE[i]));
         }
-        output2 += answer;
-        setResult2(output2);
+
+        setResult2("f(" + x + ") = " + answer);
 
     }
+
     return (
         <div className="container">
             <h1>Polynomial Function</h1>
@@ -71,8 +71,8 @@ function PolynomialFunction() {
                 <input className="result" type="text" id="resultPoly2" name="resultPoly2" value={resultPoly2} readOnly />
                 <input type="submit" value="Calculate" />
             </form>
-
         </div>
     );
 }
+
 export default PolynomialFunction

@@ -14,8 +14,7 @@ function HeronsFormula() {
         if (a <= 0 || b <= 0 || c <= 0) {
             setResult("Not a valid triangle");
         } else {
-            const area = (1 / 4) * (Math.sqrt(4 * a * a * b * b - (a * a + b * b - c * c) * (a * a + b * b - c * c)));
-            setResult(area);
+            setResult((1 / 4) * (Math.sqrt(4 * a * a * b * b - (a * a + b * b - c * c) * (a * a + b * b - c * c))));
         }
     }
 
@@ -36,4 +35,5 @@ function HeronsFormula() {
         </div>
     );
 }
+
 export default HeronsFormula

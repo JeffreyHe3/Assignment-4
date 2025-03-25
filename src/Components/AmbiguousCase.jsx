@@ -15,7 +15,7 @@ function AmbiguousCase() {
         } else {
             const h = b * Math.sin(angle * (Math.PI / 180));
 
-            if (angle < 90) {   
+            if (angle < 90) {
                 if (a < h) {
                     setResult("No triangle");
                 } else if (a == h) {
@@ -52,4 +52,5 @@ function AmbiguousCase() {
         </div>
     );
 }
+
 export default AmbiguousCase

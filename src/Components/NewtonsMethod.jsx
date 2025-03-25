@@ -21,6 +21,7 @@ function NewtonsMethod() {
         }
 
         root1 = newton(root);
+        
         while (Math.trunc(root * 1000) != Math.trunc(root1 * 1000)) {
             root = newton(root1);
             root1 = newton(root);
@@ -42,4 +43,5 @@ function NewtonsMethod() {
         </div>
     );
 }
+
 export default NewtonsMethod
