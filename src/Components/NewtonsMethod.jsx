@@ -9,13 +9,15 @@ function NewtonsMethod() {
         event.preventDefault();
 
         function functionUsed(x) {
-            return (6 * Math.pow(x, 4) - 13 * Math.pow(x, 3) - 18 * Math.pow(x, 2) + 7 * x + 6);
+            return 6 * Math.pow(x, 4) - 13 * Math.pow(x, 3) - 18 * Math.pow(x, 2) + 7 * x + 6;
         }
+
         function derivativeUsed(x) {
-            return (24 * Math.pow(x, 3) - 39 * Math.pow(x, 2) - 36 * x + 7);
+            return 24 * Math.pow(x, 3) - 39 * Math.pow(x, 2) - 36 * x + 7;
         }
+
         function newton(x) {
-            return x - (functionUsed(x) / derivativeUsed(x));
+            return x - functionUsed(x) / derivativeUsed(x);
         }
 
         root1 = newton(root);

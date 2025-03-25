@@ -49,7 +49,7 @@ function PolynomialFunction() {
         setResult1(output1);
 
         for (let i = 0; i < arrayC.length; i++) {
-            answer += parseFloat(parseFloat(arrayC[i]) * Math.pow(x, parseFloat(arrayE[i])));
+            answer += parseFloat(arrayC[i]) * Math.pow(xValue, parseFloat(arrayE[i]));
         }
         output2 += answer;
         setResult2(output2);
