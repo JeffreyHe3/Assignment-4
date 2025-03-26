@@ -1,6 +1,6 @@
 #app-container {
     font-family: Arial, sans-serif;
-    background-color: #bebec7;
+    background-color: #f4f4f9;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
