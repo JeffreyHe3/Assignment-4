@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 
-function AmbiguousCase() {
+function AmbiguousCase(props) {
     const [angle, setAngle] = useState("");
     const [a, setA] = useState("");
     const [b, setB] = useState("");
@@ -37,7 +37,7 @@ function AmbiguousCase() {
 
     return (
         <div className="container">
-            <h1>Ambiguous Case</h1>
+            <h1>{props.title}</h1>
             <form id="amb-form" onSubmit={event => { Ambiguous(event) }}>
                 <label htmlFor="angleAAmb">Angle A (&deg;):</label>
                 <input type="number" step="0.01" id="angleAAmb" name="angleAAmb" value={angle} onChange={event => { setAngle(Number(event.target.value)) }} required />

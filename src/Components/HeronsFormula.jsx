@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 
-function HeronsFormula() {
+function HeronsFormula(props) {
     const [a, setA] = useState("");
     const [b, setB] = useState("");
     const [c, setC] = useState("");
@@ -19,7 +19,7 @@ function HeronsFormula() {
 
     return (
         <div className="container">
-            <h1>Heron's Formula</h1>
+            <h1>{props.title}</h1>
             <form id="heron-form" onSubmit={event => { Heron(event) }}>
                 <label htmlFor="sideAHeron">Side a:</label>
                 <input type="number" step="0.01" id="sideAHeron" name="sideAHeron" value={a} onChange={event => { setA(Number(event.target.value)) }} required />

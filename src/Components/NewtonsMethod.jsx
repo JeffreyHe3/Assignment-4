@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 
-function NewtonsMethod() {
+function NewtonsMethod(props) {
     let [root, setRoot] = useState("");
     let [root1, setResult] = useState("");
 
@@ -32,7 +32,7 @@ function NewtonsMethod() {
 
     return (
         <div className="container">
-            <h1>Newton's Method</h1>
+            <h1>{props.title}</h1>
             <form id="newton-form" onSubmit={event => { Newton(event) }}>
                 <label htmlFor="rootGuessNewton">Root Guess:</label>
                 <input type="number" step="0.01" id="rootGuessNewton" name="rootGuessNewton" value={root} onChange={event => { setRoot(Number(event.target.value)) }} required />

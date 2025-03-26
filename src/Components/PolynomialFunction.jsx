@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './style.css'
 
-function PolynomialFunction() {
+function PolynomialFunction(props) {
     let [cPoly, setCPoly] = useState("");
     let [ePoly, setEPoly] = useState("");
     const [x, setX] = useState("");
@@ -57,7 +57,7 @@ function PolynomialFunction() {
 
     return (
         <div className="container">
-            <h1>Polynomial Function</h1>
+            <h1>{props.title}</h1>
             <form id="poly-form" onSubmit={event => { Polynomial(event) }}>
                 <label htmlFor="cPoly">Coefficients:</label>
                 <input type="text" id="cPoly" name="cPoly" value={cPoly} onChange={event => { setCPoly(String(event.target.value)) }} required />
