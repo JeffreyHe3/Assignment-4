@@ -26,7 +26,7 @@ function AmbiguousCase(props) {
                     setResult("Two triangles (ambiguous case)");
                 }
             } else {
-                if (a >= b) {
+                if (a > b) {
                     setResult("One triangle");
                 } else {
                     setResult("No triangle");
